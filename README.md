@@ -18,20 +18,21 @@ Given 5 separate datasets (`all_sessions`, `analytics`, `products`, `sales_by_sk
 
 ## Process
 ### 1. Importing raw data and engineering a database
-During data extraction, raw data was exported from a source directly to a staging area. Taking into consideration high volume of one of the tables, all data transformation was performed directly in a database. Minor visualization was done in Excel, but preference was given to SQL to explore inconsistencies and clean the data.
+During data extraction, raw data was exported from a source directly to a staging area. Taking into consideration high volume of one of the tables, all data transformation was performed directly in a database. Minor visualization was done in Excel, but preference was given to SQL to explore inconsistencies and clean the data. In order to perform SQL operations, pgAdmin was used as a database management tool. Normally for routine data manipulations (once data is cleaned and transformed), VS Code can be utilized as it has a more friendly interface and useful plugins. To work with repository, both Github desktop and command line were used.
 
 > [!NOTE]
 > All steps taken to create a database in pgAdmin were described in [data cleaning](https://github.com/ankamercier/Final-SQL-Project/blob/main/cleaning_data.md) 
 
 ### 2. Cleaning and transforming the data:
+
 - The tables are cleaned in the following order: `all_sessions`, `analytics`, `products`, `sales_by_sku`, `sales_report`
 - Cleaning was in fact performed using a reverse method, by exploring the questions first, mapping the data, and discovering fixable issues during the process in order to reshape data without changing the content
 
 The overall approach to clean the data:
-    - Remove unwanted or irrelevant observations
-    - Ensure accurate datatypes
-    - Address missing values
-    - Fix typos
+- Remove unwanted or irrelevant observations
+- Ensure accurate datatypes
+- Address missing values
+- Fix typos
   
  :pushpin: **JUMP TO:** [data cleaning](https://github.com/ankamercier/Final-SQL-Project/blob/main/cleaning_data.md)
 
