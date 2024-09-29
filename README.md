@@ -25,12 +25,13 @@ During data extraction, raw data was exported from a source directly to a stagin
 
 ### 2. Cleaning and transforming the data:
 - The tables are cleaned in the following order: `all_sessions`, `analytics`, `products`, `sales_by_sku`, `sales_report`
-- Cleaning was infact performed using a reverse method, by exploring the questions first, mapping the data, and discovering fixable issues during the process in order to reshape data without changing the content
-- The overall approach to clean the data:
-    - Remove Unwanted or Irrelavent Observations
-    - Ensure Accurate Datatypes
-    - Address Missing Values
-    - Fix Typos
+- Cleaning was in fact performed using a reverse method, by exploring the questions first, mapping the data, and discovering fixable issues during the process in order to reshape data without changing the content
+
+The overall approach to clean the data:
+    - Remove unwanted or irrelevant observations
+    - Ensure accurate datatypes
+    - Address missing values
+    - Fix typos
   
  :pushpin: **JUMP TO:** [data cleaning](https://github.com/ankamercier/Final-SQL-Project/blob/main/cleaning_data.md)
 
