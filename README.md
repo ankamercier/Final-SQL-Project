@@ -1,4 +1,4 @@
-![image credit: Think with Google](https://storage.googleapis.com/twg-content/images/SMB_AC_1920x1080.width-600.format-webp.webp)
+![image credit: Icon Scout](https://cdn3d.iconscout.com/3d/premium/thumb/search-for-product-on-e-commerce-website-6209340-5102567.png)
 # Transforming and Analyzing Data with SQL
 
 ## Project/Goals
