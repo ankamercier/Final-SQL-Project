@@ -1,4 +1,4 @@
-![image credit: Think with Google](https://storage.googleapis.com/twg-content/original_images/AC_1920x1080_1.jpg)
+![image credit: DrawKit]([https://storage.googleapis.com/twg-content/original_images/AC_1920x1080_1.jpg](https://cdn.prod.website-files.com/6364b6fd26e298b11fb9391f/6364b6fd26e2983c06b93c50_DrawKit0020_E-commerce_Illustrations_Banner.png))
 # Transforming and Analyzing Data with SQL
 
 ## Project/Goals
