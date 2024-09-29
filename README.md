@@ -1,5 +1,4 @@
-[https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fwireless-presentation-solutions-market-size&psig=AOvVaw3R9LLgLiizwB885am_8Uxa&ust=1727686887668000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjUxfbl54gDFQAAAAAdAAAAABAE] 
-[https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thinkwithgoogle.com%2Ffuture-of-marketing%2Fdigital-transformation%2Fsmall-business-resources%2F&psig=AOvVaw3R9LLgLiizwB885am_8Uxa&ust=1727686887668000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjUxfbl54gDFQAAAAAdAAAAABAJ]
+[image credit: Think with Google] (https://storage.googleapis.com/twg-content/original_images/AC_1920x1080_1.jpg)
 # Transforming and Analyzing Data with SQL
 
 ## Project/Goals
