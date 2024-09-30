@@ -170,18 +170,20 @@ To explore sentiment score towards products, we should join 2 tables: `products`
 <summary> Expand to view code 👉 </summary>
 
 ``` SQL
+-- calculating revenue segments:
 WITH revenue_segments AS (
   SELECT 
     als.country,
     als.city,
-    ROUND((als.total_transaction_revenue / 1000000), 2) AS revenue_in_millions, 
-    NTILE(4) OVER (ORDER BY als.total_transaction_revenue::numeric) AS revenue_quartile
+    ROUND((als.total_transaction_revenue / 1000000), 2) AS revenue_in_millions, -- getting revenue in millions
+    NTILE(4) OVER (ORDER BY als.total_transaction_revenue::numeric) AS revenue_quartile -- defining quartiles
   FROM all_sessions als
-  WHERE als.total_transaction_revenue IS NOT NULL
+  WHERE als.total_transaction_revenue IS NOT NULL -- avoiding empty or irrelevant cells 
     AND als.country != '(not set)'
     AND als.city != 'not available in demo dataset'
     AND als.city != '(not set)'
 ),
+-- calculating product performance:
 product_performance AS (
   SELECT 
     sr.product_sku,
@@ -189,16 +191,17 @@ product_performance AS (
     sr.total_ordered,
     p.sentiment_score,
     p.sentiment_magnitude,
-    RANK() OVER (ORDER BY sr.total_ordered DESC) AS sales_rank,
-    CASE 
+    RANK() OVER (ORDER BY sr.total_ordered DESC) AS sales_rank, -- ranking sales
+    CASE  -- naming sentiment categories and defining benchmarks
       WHEN p.sentiment_score > 0.5 THEN 'Positive'
       WHEN p.sentiment_score < -0.5 THEN 'Negative'
       ELSE 'Neutral'
     END AS sentiment_category
   FROM sales_report sr
   JOIN products p ON sr.product_sku = p.product_sku
-  WHERE total_ordered > 0
+  WHERE total_ordered > 0 -- without this clause, we would have a potential of unsold products, which is irrelevant
 )
+-- building a main output table:
 SELECT 
   rs.country, -- city
   rs.revenue_in_millions,
@@ -208,10 +211,8 @@ SELECT
   pp.total_ordered,
   pp.sales_rank,
   pp.sentiment_category,
-  -- AVG(a.time_on_site) OVER (PARTITION BY rs.country, rs.city) AS avg_time_on_site,
-  COUNT(DISTINCT a.visitid) AS unique_visits,
-  -- SUM(a.page_views) AS total_page_views,
-  CASE 
+  COUNT(DISTINCT a.visitid) AS unique_visits, -- limiting the output to include only unique visits
+  CASE -- defining market potential:
     WHEN pp.total_ordered > 100 AND rs.revenue_quartile >= 3 THEN 'High Potential'
     WHEN pp.total_ordered > 50 AND rs.revenue_quartile >= 2 THEN 'Medium Potential'
     ELSE 'Low Potential'
@@ -223,8 +224,8 @@ JOIN product_performance pp USING(product_sku)
 WHERE pp.total_ordered > 100 AND rs.revenue_quartile >= 3
 GROUP BY 
   rs.country, rs.city, rs.revenue_in_millions, rs.revenue_quartile,
-  pp.product_sku, pp.product_name, pp.total_ordered, pp.sales_rank, pp.sentiment_category --, a.time_on_site
-HAVING COUNT(DISTINCT a.visitid) > 1 -- AND market_potential LIKE 'High%'
+  pp.product_sku, pp.product_name, pp.total_ordered, pp.sales_rank, pp.sentiment_category 
+HAVING COUNT(DISTINCT a.visitid) > 1 
 ORDER BY rs.revenue_in_millions DESC
 ``` 
 
