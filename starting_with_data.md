@@ -138,7 +138,7 @@ LIMIT 3;
 
 Organic search leads bring in the total amount of unique visitors to the site with 8207 persons, followed by Direct and Referral (2805 and 2419 unique visitors).
 
-## 💡 Question 5: What are the top five products with the lowest average sentimentscore per product?
+## 💡 Question 5: What are the top five products with the lowest average `sentiment_score` per product?
 
 ### SQL Queries
 
