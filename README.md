@@ -51,9 +51,9 @@ There is much more to explore! This database provides info on revenue by product
 ### 4. Developing queries based on data exploration
 Based on previous question and data cleaning stage, it was easy to self-construct a set of questions related to the data, and provide queries and explanations. 
 Some of the questions include:
-- ...
-- ...
-- ...
+- What are the top 3 months with highest earning potential? What's the most popular month among visitors?
+- How revenue segments of the company look like? Show quartiles divided into cities with revenue in millions.
+- What are the top five products with the lowest average sentimentscore per product?
 
 :pushpin: **JUMP TO:** [further data exploration](https://github.com/ankamercier/Final-SQL-Project/blob/main/starting_with_data.md)
 
@@ -68,6 +68,8 @@ Some of the questions include:
 ### Gotcha!
 
 You can check ERD in a section on the left. 
+
+_(if you are still seeing this, I must have forgotten to take down Rick after practicing importing gifs to Github)_
 
 </details>
 
@@ -89,15 +91,18 @@ Data is well-organized and better structured.
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
 ## Challenges 
+In general, data cleaning was substantially longer than drawing actual insights. Importance of pre-cleaning the data before importing the dataset and engineering the database has to be given more thought. Other issues included:
 - Repeatedly casting and converting data types for compatibility
 - Adjusting dates and times with offsets and format localization
 - Renaming schemas, tables, and columns for clarity
 - Identifying outliers and ambiguous columns
+- Deciding on good PKs and FKs
+- Finding out that my cat is incredibly good passive listener when it comes to complaints about badly organized tables
 
 ## Future Goals
-(what would you do if you had more time?)
+What would you do if you had more time? First of all, remove the gifs. Then add a detailed explanation on how to use command line to push commit back to repository. Eventually I'd fix any typos and errors in code, come up with more questions and further simplify ERD (probably considering splitting tables for better view).
 
- > _Are you still reading? You must really like the formatting. Without further ado, let the magic begin!_ :mage_man:
+ > _Are you still reading? You must really like the formatting. Or the jokes. Without further ado, let the magic begin!_ :mage_man:
 
 [^1]: Disclaimer: this assignment is part of a final SQL project at Lighthouse Labs
 [^2]: [Datacamp: Data Quality Dimentions Cheat Sheet](https://www.datacamp.com/cheat-sheet/data-quality-dimensions-cheat-s)
