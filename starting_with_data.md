@@ -159,7 +159,7 @@ LIMIT 5;
 </details>
 
 ### ✅ Answer
-To explore sentiment score towards products, we should join 2 tables: products and sales_report. Products with the lowest average sentimentscore are: Men's Vintage Henley, Android Women's Short Sleeve Badge Tee Dark Heather, Clip-on Compact Charger, Android Men's Long & Lean Badge Tee Charcoal, and Men's Vintage Badge Tee Sage. All listed products have an average sentiment_score below -0.2.
+To explore sentiment score towards products, we should join 2 tables: `products` and `sales_report`. Products with the lowest average sentimentscore are: Men's Vintage Henley, Android Women's Short Sleeve Badge Tee Dark Heather, Clip-on Compact Charger, Android Men's Long & Lean Badge Tee Charcoal, and Men's Vintage Badge Tee Sage. All listed products have an average sentiment_score below -0.2.
 
 ## 💡 Question 6: Combining results of Q2 and Q3 into a complex query to calculate market potential
 
