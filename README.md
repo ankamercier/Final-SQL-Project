@@ -5,7 +5,7 @@
 Following e-commerce database was created based on a demo dataset with raw records ranging from 462 to over 4 millions rows [^1].  
 Project aims to achieve following objectives:
 
-- [x] Build a bew database using an ecommerce dataset from csv file
+- [x] Build a new database using an ecommerce dataset from csv file
 - [x] Investigate and perform data cleaning and transformation: remove irrelevant, duplicated data, fix structural errors, perform type conversion, handle missing data
 - [x] Look at the dataset metadata, analyze and recommend (if any) relations between the tables and columns and constraints, build an ERD
 - [x] Understand business needs based on given datapoints and metrics
@@ -14,7 +14,7 @@ Project aims to achieve following objectives:
 - [ ] Prevent alien invasion :alien:
 - [ ] Celebrate with a magnificent bliss of antipasti and a glass of chianti once tasks are complete :wine_glass:
 
-Given 5 separate datasets (`all_sessions`, `analytics`, `products`, `sales_by_sku`, `sales_report`), the goal is to create a new PostgreSQL database called `ecommerce` by setting up tables and importing data into the tables from each .csv file. Then, perform data cleaning and transformation in a new database prior to answering any emerging business problems.
+Given 5 separate tables (`all_sessions`, `analytics`, `products`, `sales_by_sku`, `sales_report`), the goal is to create a new PostgreSQL database called `ecommerce` by setting up tables and importing data into the tables from each .csv file. Then, perform data cleaning and transformation in a new database prior to answering any emerging business problems.
 
 ## Process
 ### 1. Importing raw data and engineering a database
