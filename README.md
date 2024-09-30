@@ -21,7 +21,7 @@ Given 5 separate tables (`all_sessions`, `analytics`, `products`, `sales_by_sku`
 During data extraction, raw data was exported from a source directly to a staging area. Taking into consideration high volume of one of the tables, all data transformation was performed directly in a database. Minor visualization was done in Excel, but preference was given to SQL to explore inconsistencies and clean the data. In order to perform SQL operations, pgAdmin was used as a database management tool. Normally for routine data manipulations (once data is cleaned and transformed), VS Code can be utilized as it has a more friendly interface and useful plugins. To work with repository, both Github desktop and command line were used.
 
 > [!NOTE]
-> All steps taken to create a database in pgAdmin were described in [data cleaning](https://github.com/ankamercier/Final-SQL-Project/blob/main/cleaning_data.md) 
+> All steps taken to create a database in pgAdmin were described in [data cleaning](https://github.com/ankamercier/Final-SQL-Project/blob/main/data_cleaning.md) 
 
 ### 2. Cleaning and transforming the data:
 
@@ -34,7 +34,7 @@ The overall approach to clean the data:
 - Address missing values
 - Fix typos
   
- :pushpin: **JUMP TO:** [data cleaning](https://github.com/ankamercier/Final-SQL-Project/blob/main/cleaning_data.md)
+ :pushpin: **JUMP TO:** [data cleaning](https://github.com/ankamercier/Final-SQL-Project/blob/main/data_cleaning.md)
 
 ### 3. Answering initial questions
 We all wish we could have all the answers at our fingertips. "What's for dinner?" or "Does Hogwarts really exist?" are sadly not part of this project. 
@@ -46,7 +46,7 @@ However, with a few simple queries, we can in fact challenge a given set of ques
 - Can we summarize the impact of revenue generated from each city/country?
 There is much more to explore! This database provides info on revenue by product as well as on how each visitor to the site interacted with the products (when they visited, where they were based, how many pages they viewed, how long they stayed on the site, and the number of transactions they entered).
 
-:pushpin: **JUMP TO:** [initial business questions](https://github.com/ankamercier/Final-SQL-Project/blob/main/starting_with_data.md)
+:pushpin: **JUMP TO:** [initial business questions](https://github.com/ankamercier/Final-SQL-Project/blob/main/initial_business_questions.md)
 
 ### 4. Developing queries based on data exploration
 Based on previous question and data cleaning stage, it was easy to self-construct a set of questions related to the data, and provide queries and explanations. 
@@ -55,7 +55,7 @@ Some of the questions include:
 - How revenue segments of the company look like? Show quartiles divided into cities with revenue in millions.
 - What are the top five products with the lowest average sentimentscore per product?
 
-:pushpin: **JUMP TO:** [further data exploration](https://github.com/ankamercier/Final-SQL-Project/blob/main/starting_with_data.md)
+:pushpin: **JUMP TO:** [further data exploration](https://github.com/ankamercier/Final-SQL-Project/blob/main/further_data_exploration.md)
 
 ### 5. Creating the ERD schema using Postgresql 
 
@@ -84,11 +84,11 @@ Good data quality generates trust in data. In order to measure data's quality, t
 - Consistency - a data quality dimension that measures the degree to which data is the same across all instances of the data
 - Accuracy - grammatical errors, geographical correlations (e.g. Singapore in France), date differences (e.g. current workers' birthday 200 years ago 🧛)
 
-:pushpin: **JUMP TO:** [quality assurance](https://github.com/ankamercier/Final-SQL-Project/blob/main/QA.md)
+:pushpin: **JUMP TO:** [quality assurance](https://github.com/ankamercier/Final-SQL-Project/blob/main/quality_assurance.md)
 
 ## Results
-Data is well-organized and better structured.
-(fill in what you discovered this data could tell you and how you used the data to answer those questions)
+In general, data is well-organized and better structured. Queries run smooth. What else can Data Analyst wish for?..
+(this section will br filled wiht discoveries at later stage, `check further_data_exploration` for insights)
 
 ## Challenges 
 In general, data cleaning was substantially longer than drawing actual insights. Importance of pre-cleaning the data before importing the dataset and engineering the database has to be given more thought. Other issues included:
