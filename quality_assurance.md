@@ -34,12 +34,12 @@ ORDER BY j.column_name;
 - Example: Write SQL queries to validate the data in the database, for example, by checking for missing or duplicate data, or data that falls outside expected ranges
 
 ```SQL	
---- View the range of units_sold in the `analytics` table by adjusting DESC/ASC: received 135 rows from -89 to 4324
+-- View the range of units_sold in the `analytics` table by adjusting DESC/ASC: received 135 rows from -89 to 4324
 SELECT DISTINCT units_sold
 FROM analytics
 ORDER BY units_sold DESC;
 
---- Investigate if there's any pattern that causes the number products sold < 0, or it's a mistake of the positive 89 value
+-- Investigate if there's any pattern that causes the number products sold < 0, or it's a mistake of the positive 89 value
 SELECT *
 FROM analytics
 WHERE units_sold = -89; 
@@ -50,12 +50,12 @@ WHERE units_sold = -89;
 Example: Identify any data quality issues in the database, such as missing or inconsistent data, and write SQL queries to clean the data.
 
 ```SQL
---- Convert the visitStartTime in UNIX format column to timestamp
+-- Convert the visitStartTime in UNIX format column to timestamp
 ALTER TABLE analytics
 ALTER COLUMN visitStartTime SET DATA TYPE TIMESTAMP WITH TIME ZONE
 USING TIMESTAMP WITH TIME ZONE 'EPOCH' + visitStartTime * INTERVAL '1 SECOND'; 
 
---- Clean the leading white space in front of some productname in the `sales_report` table
+-- Clean the leading white space in front of some productname in the `sales_report` table
 UPDATE sales_report
    SET productname = REGEXP_REPLACE(productname, '(^\s+)', '');
 ```
