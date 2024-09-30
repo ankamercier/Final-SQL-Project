@@ -102,7 +102,7 @@ In general, data cleaning was substantially longer than drawing actual insights.
 ## Future Goals
 What would you do if you had more time? First of all, remove the gifs. Then add a detailed explanation on how to use command line to push commit back to repository. Eventually I'd fix any typos and errors in code, come up with more questions and further simplify ERD (probably considering splitting tables for better view).
 
- > _Are you still reading? You must really like the formatting. Or the jokes. Without further ado, let the magic begin!_ :mage_man:
+ > _Are you still reading? You must really like the formatting. Or jokes. Without further ado, let the magic begin!_ :mage_man:
 
 [^1]: Disclaimer: this assignment is part of a final SQL project at Lighthouse Labs
 [^2]: [Datacamp: Data Quality Dimentions Cheat Sheet](https://www.datacamp.com/cheat-sheet/data-quality-dimensions-cheat-s)
