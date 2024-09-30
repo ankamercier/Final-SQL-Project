@@ -627,6 +627,8 @@ NOT IN (
 
 We might have not set the PK for this table yet, but the composite key using (full_visitorid, visitid) seems to be a good candidate. They can be used to find connection with the `all_sessions` table.
 
+**EDIT:** _best option is a composite key containing `full_visitorid`, `visitid`, and `channel_grouping`_
+
 ``` SQL
 ALTER TABLE analytics
 ADD CONSTRAINT PK_analytics PRIMARY KEY (full_visitorid, visitid);
