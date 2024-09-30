@@ -284,16 +284,6 @@ FROM ranked_products
 WHERE rank = 1
 ORDER BY total_sold DESC, country, city;
 ```
-</details>
-
-### ✅ Answer 
-
-The output returns 233 rows (all cities listed where order were placed). Products in each city were ranked and only top result included in product_name and corresponding total_sold. 
-
-Pattern in the products sold per city and country: 
-1. Nest Cam Indoor Security Camera product and Google 17oz Bottle sell really well in terms of quantity in the US (Mountain View, New York, Palo Alto) and other countries
-2. Surprisingly, "Ballpoint LED Light Pen" has top sales in Pune (India), Seoul and Boston (456 total sold in all three).
-
 Accidently found an error in results, Singapore in France (1 row), and New York in Canada (1 row).
 
 ``` SQL
@@ -303,6 +293,15 @@ WHERE city = 'Singapore';
 SELECT city, country FROM all_sessions
 WHERE city = 'New York' and country = 'Canada';
 ```
+</details>
+
+### ✅ Answer 
+
+The output returns 233 rows (all cities listed where order were placed). Products in each city were ranked and only top result included in product_name and corresponding total_sold. 
+
+Pattern in the products sold per city and country: 
+1. Nest Cam Indoor Security Camera product and Google 17oz Bottle sell really well in terms of quantity in the US (Mountain View, New York, Palo Alto) and other countries
+2. Surprisingly, "Ballpoint LED Light Pen" has top sales in Pune (India), Seoul and Boston (456 total sold in all three).
 
 ## 💡Question 5: Can we summarize the impact of revenue generated from each city/country?
 
