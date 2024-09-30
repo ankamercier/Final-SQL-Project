@@ -106,7 +106,7 @@ This suggests that while these products have positive sentiment, they may not ha
 
 > ### ❗ Here's what it means for business (insights and recommendations)
 > The high sentiment scores and magnitudes indicate that customers who interact with these products have very positive impressions.
-> The disconnect between positive sentiment and zero orders is noteworthy and requires further investigation. Possible explanations could include:
+> The disconnect between positive sentiment and zero orders is noteworthy and requires further investigation (these results were excluded from the query using `WHERE` clause. Possible explanations could include:
 > - These are new or upcoming products with no sales data yet
 > - There might be inventory or availability issues preventing sales
 > - There could be a data recording problem in the sales system
